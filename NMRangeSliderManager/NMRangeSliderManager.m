@@ -1,6 +1,6 @@
 #import "NMRangeSliderManager.h"
 #import "../NMRangeSlider/NMRangeSlider.h"
-#import "RCTEventDispatcher.h"
+#import "React/RCTEventDispatcher.h"
 #import "UIView+React.h"
 #import "../NMRangeSlider/MMColorForTrack.h"
 #import "RCTUtils.h"

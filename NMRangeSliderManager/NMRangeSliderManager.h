@@ -1,5 +1,5 @@
-#import "RCTBridgeModule.h"
-#import "RCTViewManager.h"
+#import "React/RCTBridgeModule.h"
+#import "React/RCTViewManager.h"
 #import "../NMRangeSlider/NMRangeSlider.h"
 
 @interface NMRangeSliderManager : RCTViewManager
