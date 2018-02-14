@@ -1,24 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Text, ColorPropType } from 'react-native';
 
 const requireNativeComponent =  require('react-native').requireNativeComponent;
 const NMRangeSliderIOS = React.createClass({
   propTypes: {
-    minimumValue: React.PropTypes.number,
-    maximumValue: React.PropTypes.number,
-    lowerValue: React.PropTypes.number,
-    lowerMaximumValue: React.PropTypes.number,
-    upperValue: React.PropTypes.number,
-    upperMinimumValue: React.PropTypes.number,
-    minimumRange: React.PropTypes.number,
-    stepValue: React.PropTypes.number,
-    stepValueContinuously: React.PropTypes.bool,
-    continuous: React.PropTypes.bool,
-    lowerCenter: React.PropTypes.object, // CGPoint?
-    upperCenter: React.PropTypes.object, // CGPoint?
-    onChange: React.PropTypes.func,
+    minimumValue: PropTypes.number,
+    maximumValue: PropTypes.number,
+    lowerValue: PropTypes.number,
+    lowerMaximumValue: PropTypes.number,
+    upperValue: PropTypes.number,
+    upperMinimumValue: PropTypes.number,
+    minimumRange: PropTypes.number,
+    stepValue: PropTypes.number,
+    stepValueContinuously: PropTypes.bool,
+    continuous: PropTypes.bool,
+    lowerCenter: PropTypes.object, // CGPoint?
+    upperCenter: PropTypes.object, // CGPoint?
+    onChange: PropTypes.func,
     trackColor: ColorPropType,
-    disabled: React.PropTypes.bool,
+    disabled: PropTypes.bool,
   },
 
   componentDidMount() {
