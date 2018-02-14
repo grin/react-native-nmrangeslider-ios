@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Text, ColorPropType } from 'react-native';
 
 const requireNativeComponent =  require('react-native').requireNativeComponent;
-const NMRangeSliderIOS = React.createClass({
-  propTypes: {
+class NMRangeSliderIOS extends React.Component {
+  static propTypes = {
     minimumValue: PropTypes.number,
     maximumValue: PropTypes.number,
     lowerValue: PropTypes.number,
@@ -20,31 +20,31 @@ const NMRangeSliderIOS = React.createClass({
     onChange: PropTypes.func,
     trackColor: ColorPropType,
     disabled: PropTypes.bool,
-  },
+  };
 
   componentDidMount() {
     this.setState({...this.props});
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     this.setState(nextProps);
-  },
+  }
 
   convertNativeEvent(event) {
     return [
       parseInt(event.nativeEvent.lowerValue, 10),
       parseInt(event.nativeEvent.upperValue, 10),
     ];
-  },
+  }
 
-  _onChange: function(event) {
+  _onChange(event) {
     if (!this.props.onChange) {
       return;
     }
     this.props.onChange(this.convertNativeEvent(event));
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <NMRangeSlider
         {...this.props}
@@ -56,7 +56,7 @@ const NMRangeSliderIOS = React.createClass({
       />
     )
   }
-});
+}
 
 const NMRangeSlider = requireNativeComponent('NMRangeSlider', NMRangeSliderIOS, {
   nativeOnly: {
